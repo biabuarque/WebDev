@@ -1,19 +1,15 @@
-/* Reset and Box-Sizing */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Global Styles */
 html {
   background-color: #EFFFFA;
   font-size: 16px;
-  /* Font-family will be inherited from the loaded Google Fonts */
   font-family: 'Ubuntu', sans-serif;
 }
 
-/* Container Grid Layout */
 .container {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -26,7 +22,6 @@ html {
   margin: 0 auto;
 }
 
-/* Header Styles */
 .header {
   grid-area: header;
   background: #D62839;
@@ -40,7 +35,6 @@ html {
   color: #EFFFFA;
 }
 
-/* Navigation Styles */
 nav {
   margin-top: 1em;
   display: flex;
@@ -60,27 +54,17 @@ nav ul li {
 }
 
 .search-container {
-  /* 1) Layout */
   display: flex;
   align-items: center;
-
-  /* 2) Background & border */
-  background-color: #ffffff;    /* or #EFFFFA, whichever light color you prefer */
-  border: 2px solid #160C28;   /* choose a border color or remove if not desired */
-  border-radius: 25px;         /* rounds the entire container */
-
-  /* 3) Spacing & overflow */
-  /* If you don't want the button's rounded corners to be clipped,
-     avoid setting overflow: hidden; */
-  /* overflow: hidden;  <- remove if it clips the button rounding */
-
-  /* 4) Padding so text isn't flush against edges */
+  background-color: #ffffff;
+  border: 2px solid #160C28;
+  border-radius: 25px;
   padding: 0.25em;
 }
 
 .search-container input[type="search"] {
   flex: 1;
-  background-color: transparent;  /* inherits the container's color if transparent */
+  background-color: transparent;
   border: none;
   outline: none;
   padding: 0.5em;
@@ -89,26 +73,17 @@ nav ul li {
 }
 
 .search-container input[type="submit"] {
-  /* 5) Distinct button style while matching container’s shape */
   background-color: #160C28;
   color: #EFFFFA;
   border: none;
   cursor: pointer;
-
-  /* 6) Additional rounding if you'd like a pill shape on the right side */
   border-radius: 25px;
-
-  /* 7) Padding to give the button some space */
   padding: 0.5em 1.25em;
-  
-  /* 8) Adjust font and possibly boldness or letter spacing to match design */
   font-size: 1rem;
   font-weight: bold;
   font-family: 'Young Serif', serif;
 }
 
-
-/* Link Styles */
 a:link {
   color: #EFFFFA;
   text-decoration: none;
@@ -120,9 +95,9 @@ a:visited {
 
 a:hover {
   font-family: 'Young Serif', serif;
+  font-size: 90%;
 }
 
-/* Main Content */
 .main_area {
   grid-area: main;
   padding: 2em;
@@ -138,7 +113,6 @@ a:hover {
   margin-bottom: 0.5em;
 }
 
-/* Aside (Sidebar) Styles */
 .aside {
   grid-area: aside;
   background: #2B59C3;
@@ -154,6 +128,7 @@ a:hover {
 }
 
 .aside ul {
+  margin-bottom: 2em;
   list-style: none;
 }
 
@@ -161,7 +136,6 @@ a:hover {
   margin-bottom: 0.5em;
 }
 
-/* Typography */
 h3 {
   font-family: 'Young Serif', serif;
   text-transform: uppercase;
@@ -173,11 +147,71 @@ p {
   margin-top: 0.5em;
 }
 
-/* Footer Styles */
 .footer {
   grid-area: footer;
   background: #D62839;
   padding: 1em;
   text-align: center;
   color: #EFFFFA;
+}
+
+.comment-section {
+  margin-top: 3em;
+  padding: 1em;
+  background-color: #F8F8F8;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.comment-section h2 {
+  font-family: 'Young Serif', serif;
+  font-size: 1.6em;
+  margin-bottom: 0.5em;
+  color: #2B59C3;
+}
+
+.comment-section form {
+  display: flex;
+  flex-direction: column;
+}
+
+.comment-section label {
+  font-family: 'Ubuntu', sans-serif;
+  margin-bottom: 0.5em;
+}
+
+.comment-section select {
+  padding: 0.5em;
+  margin-bottom: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #FFBC42;
+  color: #160C28;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
+}
+
+.comment-section textarea {
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: vertical;
+  margin-bottom: 1em;
+}
+
+.comment-section input[type="submit"] {
+  padding: 0.75em;
+  background-color: #FFBC42;
+  color: #160C28;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.comment-section input[type="submit"]:hover {
+  color: #EFFFFA;
+  background-color: #0f081e;
 }

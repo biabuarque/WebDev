@@ -3,14 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Google Fonts Import - Moved from CSS to HTML -->
     <link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Ubuntu:ital,wght@0,400;0,700&family=Ubuntu+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css" />
     <title>BibiBlog</title>
-    <!-- Legacy support for older Internet Explorer versions -->
-    <!--[if lt IE 9]>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
-    <![endif]-->
   </head>
   <body>
     <div class="container">
@@ -23,7 +18,6 @@
             <li><a href="#">Unpopular Opinions</a></li>
             <li><a href="#">Bibi Recommends</a></li>
           </ul>
-          <!-- Improved Search Bar as a Cohesive Unit -->
           <div class="search-container">
             <input type="search" name="q" placeholder="Something specific?" />
             <input type="submit" value="SEARCH!" />
@@ -32,7 +26,6 @@
       </header>
 
       <main class="main_area">
-        <!-- Example Article -->
         <article>
           <h2>Coffee grains are the best snack ever made</h2>
           <p>
@@ -169,11 +162,17 @@
           <li><a href="#">Omelas and every industry that got "fast" in its nickname</a></li>
           <li><a href="#">The Devil Wears Prada should be based on Academic Research</a></li>
         </ul>
+      
+        <section class="comment-section"></section>
+          <h2>Send Comment</h2>
+          <form action="#" method="post">
+            <label for="comment-target">Comment on:</label>
+            <select id="comment-target" name="comment_target">
+              <option value="article">This Article</option>
+              <option value="blog">Blog</option>
+            </select>
+            <textarea id="comment" name="comment" placeholder="Write your comment here..." rows="4"></textarea>
+            <input type="submit" value="Send Comment" />
+          </form>
+        </section>
       </aside>
-
-      <footer class="footer">
-        <p>© Copyright 2050 by nobody. All rights reversed.</p>
-      </footer>
-    </div>
-  </body>
-</html>
