@@ -1,0 +1,183 @@
+/* Reset and Box-Sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global Styles */
+html {
+  background-color: #EFFFFA;
+  font-size: 16px;
+  /* Font-family will be inherited from the loaded Google Fonts */
+  font-family: 'Ubuntu', sans-serif;
+}
+
+/* Container Grid Layout */
+.container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas:
+    "header header"
+    "main aside"
+    "footer footer";
+  gap: 1em;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header Styles */
+.header {
+  grid-area: header;
+  background: #D62839;
+  padding: 2em;
+}
+
+.header h1 {
+  font-family: 'Ubuntu Mono', monospace;
+  font-size: 3rem;
+  text-align: left;
+  color: #EFFFFA;
+}
+
+/* Navigation Styles */
+nav {
+  margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+nav ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  list-style: none;
+  margin: 1em 0;
+}
+
+nav ul li {
+  text-align: center;
+}
+
+.search-container {
+  /* 1) Layout */
+  display: flex;
+  align-items: center;
+
+  /* 2) Background & border */
+  background-color: #ffffff;    /* or #EFFFFA, whichever light color you prefer */
+  border: 2px solid #160C28;   /* choose a border color or remove if not desired */
+  border-radius: 25px;         /* rounds the entire container */
+
+  /* 3) Spacing & overflow */
+  /* If you don't want the button's rounded corners to be clipped,
+     avoid setting overflow: hidden; */
+  /* overflow: hidden;  <- remove if it clips the button rounding */
+
+  /* 4) Padding so text isn't flush against edges */
+  padding: 0.25em;
+}
+
+.search-container input[type="search"] {
+  flex: 1;
+  background-color: transparent;  /* inherits the container's color if transparent */
+  border: none;
+  outline: none;
+  padding: 0.5em;
+  font-size: 1rem;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.search-container input[type="submit"] {
+  /* 5) Distinct button style while matching container’s shape */
+  background-color: #160C28;
+  color: #EFFFFA;
+  border: none;
+  cursor: pointer;
+
+  /* 6) Additional rounding if you'd like a pill shape on the right side */
+  border-radius: 25px;
+
+  /* 7) Padding to give the button some space */
+  padding: 0.5em 1.25em;
+  
+  /* 8) Adjust font and possibly boldness or letter spacing to match design */
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: 'Young Serif', serif;
+}
+
+
+/* Link Styles */
+a:link {
+  color: #EFFFFA;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #FFBC42;
+}
+
+a:hover {
+  font-family: 'Young Serif', serif;
+}
+
+/* Main Content */
+.main_area {
+  grid-area: main;
+  padding: 2em;
+}
+
+.main_area article {
+  margin-bottom: 2em;
+}
+
+.main_area article h2 {
+  font-family: 'Young Serif', serif;
+  font-size: 1.8em;
+  margin-bottom: 0.5em;
+}
+
+/* Aside (Sidebar) Styles */
+.aside {
+  grid-area: aside;
+  background: #2B59C3;
+  padding: 1em;
+}
+
+.aside h2 {
+  font-family: 'Young Serif', serif;
+  font-size: 1.8em;
+  font-weight: lighter;
+  color: #EFFFFA;
+  margin-bottom: 1em;
+}
+
+.aside ul {
+  list-style: none;
+}
+
+.aside ul li {
+  margin-bottom: 0.5em;
+}
+
+/* Typography */
+h3 {
+  font-family: 'Young Serif', serif;
+  text-transform: uppercase;
+  margin-top: 1em;
+}
+
+p {
+  line-height: 1.6;
+  margin-top: 0.5em;
+}
+
+/* Footer Styles */
+.footer {
+  grid-area: footer;
+  background: #D62839;
+  padding: 1em;
+  text-align: center;
+  color: #EFFFFA;
+}
