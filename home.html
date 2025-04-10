@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Ubuntu:ital,wght@0,400;0,700&family=Ubuntu+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+    <title>BibiBlog</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1>BibiBlog.</h1>
+        <nav>
+          <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="new.html">What's New</a></li>
+            <li><a href="unpopular.html">Unpopular Opinions</a></li>
+            <li><a href="recom.html">Bibi Recommends</a></li>
+          </ul>
+          <div class="search-container">
+            <input type="search" name="q" placeholder="Something specific?" />
+            <input type="submit" value="SEARCH!" />
+          </div>
+        </nav>
+      </header>
+
+      <main class="main_area">
+        <h1>Home</h1>
+        <article>
+          <h2>Why You Absolutely, Positively, Definitely Should Start a Blog</h2>
+              <p>
+                Ever feel the urge to share your thoughts, but worry about overwhelming your social circle? A blog is your personal stage where you can express yourself freely, without the fear of eye-rolls or muted group chats. It's like having a megaphone that only those truly interested will tune into.
+              </p>
+              <h3>Become the Master of Your Own (Online) Universe</h3>
+              <p>
+                In the vast expanse of the internet, a blog serves as your personal plot of land. Here, you're the architect, the ruler, the supreme overlord. You decide the theme, the content, and the rules. It's a space where your voice reigns supreme, unfiltered and unedited.
+                Moreover, having a blog can be the cherry on top of your resume. It showcases your expertise, dedication, and ability to commit to something beyond binge-watching series. Employers appreciate candidates who demonstrate initiative, and a well-maintained blog does just that.
+              </p>
+              <h3>Connect with Like-Minded Individuals (Or At Least People Who Pretend to Agree)</h3>
+              <p>
+                Ever had a fleeting thought that you believed was pure genius? With a blog, you can immortalize those nuggets of wisdom. Over time, these musings can attract an audience, and who knows? Maybe even a cult following. Blogging opens the door to a community of individuals who share your interests. Whether you're into underwater basket weaving or extreme ironing, there's an audience out there waiting to engage with your content. It's networking without the awkward small talk.
+              </p>
+              <h3>A Legitimate Excuse to Spend Hours Online</h3>
+              <p>
+                Tired of being judged for endless screen time? Tell your critics you're "working on your blog." Suddenly, you're not just browsing aimlessly; you're a content creator, a digital entrepreneur, a visionary.
+              </p>
+              <h3>Summing It Up: Why This Blog Exists</h3>
+              <p>
+                In essence, this blog is a testament to all the reasons above. It's a platform for expression, connection, and perhaps a touch of self-indulgence. But most importantly, it's here because, why not? If you've ever contemplated starting a blog, take this as your sign. Dive in, the blogosphere is waiting. 
+              </p>
+              <p>
+                <strong>Disclaimer:</strong> This blog is not a manifesto. It's a collection of thoughts, musings, and perhaps a sprinkle of nonsense. If you find yourself nodding along, great! If not, well, that's the beauty of the internet—there's something for everyone.
+              </p>
+        </article>
+
+        <div class="main-button-container">
+          <button type="button" class="main-button main-button--large" aria-label="See Latest Posts">
+            See Latest Posts
+          </button>
+        </div>    
+
+      </main>
+
+      <aside class="aside">
+        <h2>Most Popular</h2>
+        <ul>
+          <li><a href="#">K-pop is the best political strategy of the century</a></li>
+          <li><a href="#">Why you should give Reddit a chance</a></li>
+          <li><a href="#">On birth control: having the hormonal cycle of a man and its perks</a></li>
+          <li><a href="#">Omelas and every industry that got "fast" in its nickname</a></li>
+          <li><a href="#">The Devil Wears Prada should be based on Academic Research</a></li>
+        </ul>
+      
+        <!-- Comment Section (existing) -->
+      <section class="comment-section">
+        <h2>What do y<u>ou</u> think?</h2>
+        <form action="#" method="post" id="comment-form">
+          <label for="comment-target">Comment on:</label>
+          <select id="comment-target" name="comment_target">
+            <option value="article">This Article</option>
+            <option value="blog">Blog</option>
+          </select>
+          <textarea id="comment" name="comment" placeholder="Write your comment here..." rows="4"></textarea>
+          <input type="submit" value="Send Comment" />
+        </form>
+      </section>
+
+      <!-- New Comments Display Section -->
+      <section class="posted-comments">
+        <!-- Article-Specific Comments -->
+        <div id="article-comments" class="comments-container">
+          <h2>On this Article</h2>
+          <ul class="comments-list">
+            <!-- Example default placeholder; will be replaced dynamically via JavaScript -->
+            <li class="comment-placeholder">No comments yet. Be the first to comment on this article!</li>
+          </ul>
+        </div>
+
+        <!-- Blog-Wide Comments -->
+        <div id="blog-comments" class="comments-container">
+          <h2>On BibiBlog</h2>
+          <ul class="comments-list">
+            <!-- Example default placeholder; will be replaced dynamically via JavaScript -->
+            <li class="comment-placeholder">No comments yet. Be the first to comment on the blog!</li>
+          </ul>
+        </div>
+      </section>
+        </aside>
