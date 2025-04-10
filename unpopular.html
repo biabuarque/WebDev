@@ -92,6 +92,21 @@
             qualities that human creativity brings to art.
           </p>
         </article>
+
+        <section class="comment-section">
+            <h2>What do y<u>ou</u> think?</h2>
+            <form action="#" method="post" id="article-comment-form">
+              <textarea id="article-comment" name="comment" placeholder="Write your comment here..." rows="4"></textarea>
+              <input type="submit" value="Send" />
+            </form>
+          </section>
+        
+        <section class="posted-comments">
+        <h2>Article Comments</h2>
+        <ul class="comments-list">
+            <li class="comment-placeholder">No comments yet on this article. Be the first to comment!</li>
+        </ul>
+        </section>
       </main>
 
       <aside class="aside">
@@ -103,39 +118,20 @@
           <li><a href="#">Omelas and every industry that got "fast" in its nickname</a></li>
           <li><a href="#">The Devil Wears Prada should be based on Academic Research</a></li>
         </ul>
+
+        <section class="posted-comments">
+            <h2>On the Blog</h2>
+            <ul class="comments-list">
+                <li class="comment-placeholder">No messages yet. Leave one below!</li>
+            </ul>
+            </section>
       
-        <!-- Comment Section (existing) -->
-      <section class="comment-section">
-        <h2>What do y<u>ou</u> think?</h2>
-        <form action="#" method="post" id="comment-form">
-          <label for="comment-target">Comment on:</label>
-          <select id="comment-target" name="comment_target">
-            <option value="article">This Article</option>
-            <option value="blog">Blog</option>
-          </select>
-          <textarea id="comment" name="comment" placeholder="Write your comment here..." rows="4"></textarea>
-          <input type="submit" value="Send Comment" />
-        </form>
-      </section>
-
-      <!-- New Comments Display Section -->
-      <section class="posted-comments">
-        <!-- Article-Specific Comments -->
-        <div id="article-comments" class="comments-container">
-          <h2>On this Article</h2>
-          <ul class="comments-list">
-            <!-- Example default placeholder; will be replaced dynamically via JavaScript -->
-            <li class="comment-placeholder">No comments yet. Be the first to comment on this article!</li>
-          </ul>
-        </div>
-
-        <!-- Blog-Wide Comments -->
-        <div id="blog-comments" class="comments-container">
-          <h2>On BibiBlog</h2>
-          <ul class="comments-list">
-            <!-- Example default placeholder; will be replaced dynamically via JavaScript -->
-            <li class="comment-placeholder">No comments yet. Be the first to comment on the blog!</li>
-          </ul>
-        </div>
-      </section>
+        <section class="comment-section">
+            <h2>Leave a message</h2>
+            <form action="#" method="post" id="blog-comment-form">
+              <textarea id="blog-comment" name="comment" placeholder="Write your message here..." rows="4"></textarea>
+              <input type="submit" value="Send" />
+            </form>
+          </section>
+        
         </aside>

@@ -173,11 +173,20 @@ p {
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
+.main_area .comment-section {
+  background-color: #D62839;
+}
+
 .comment-section h2 {
   font-family: 'Young Serif', serif;
   font-size: 1.6em;
   margin-bottom: 0.5em;
   color: #2B59C3;
+}
+
+.main_area .comment-section h2 {
+  color: #EFFFFA;
+  font-weight: lighter;
 }
 
 .comment-section form {
@@ -188,17 +197,6 @@ p {
 .comment-section label {
   font-family: 'Ubuntu', sans-serif;
   margin-bottom: 0.5em;
-}
-
-.comment-section select {
-  padding: 0.5em;
-  margin-bottom: 1em;
-  border: 1px solid #EFFFFA;
-  border-radius: 5px;
-  background-color: #FFBC42;
-  color: #160C28;
-  font-family: 'Ubuntu', sans-serif;
-  font-weight: bold;
 }
 
 .comment-section textarea {
@@ -215,11 +213,16 @@ p {
   background-color: #FFBC42;
   color: #160C28;
   border: none;
-  border-radius: 5px;
+  border-radius: 20px;
   font-family: 'Ubuntu', sans-serif;
   font-weight: bold;
+  text-transform: uppercase;
   cursor: pointer;
   transition: background-color 0.3s ease;
+}
+
+.main_area .comment-section input[type="submit"] {
+  background-color: #EFFFFA;
 }
 
 .comment-section input[type="submit"]:hover {
@@ -227,11 +230,22 @@ p {
   background-color: #D62839;
 }
 
+.main_area .comment-section input[type="submit"]:hover {
+  color: #160C28;
+  background-color: #FFBC42;
+}
+
 .posted-comments {
   margin-top: 2em;
   display: flex;
   flex-direction: column;
-  gap: 2em;
+  gap: 1em;
+}
+
+.posted-comments h2 {
+  font-family: 'Young Serif', serif;
+  font-size: 1.6em;
+  margin-bottom: 0em;
 }
 
 .comments-container {
@@ -258,7 +272,7 @@ p {
   font-family: 'Ubuntu', sans-serif;
   background: #EFFFFA;
   margin-bottom: 0.75em;
-  padding: 0.5em;
+  padding: 2em;
   border-radius: 5px;
 }
 
@@ -288,6 +302,7 @@ p {
 
 .main-button:hover {
   background-color: #0f081e;
+  font-size: 1rem;
 }
 
 .main-button--large {
@@ -297,6 +312,11 @@ p {
   padding: 0.5em;
   font-size: 1.25rem;
 }
+
+.main-button--large:hover {
+  font-size: 1.25rem;
+}
+
 
 @media (max-width: 600px) {
   .main-button--large {
